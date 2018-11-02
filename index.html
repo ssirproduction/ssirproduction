@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SSIR Tag Maker Adjusted</title>
+  <title>Web Page Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SSIR Tag Maker">
-  <meta name="author" content="SSIR Producer">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
   <!-- <link rel="stylesheet" href="#"> -->
   <style>
 
@@ -34,7 +34,8 @@ button {
 </head>
 
 <body>
-<button id="makeTagListBtn">Make Tag List for EE</button>
+  <p>Tags Below</p>
+<div><button id="makeTagListBtn">Make Tags List for EE</button></div>
 <div class="grid-container">
 	<div>
 	<select id="bigTagList" name="bigTagList" size="30" multiple></select>
@@ -42,48 +43,52 @@ button {
 	<div>
 		<p id="output"></p>
 	</div>
+</div>
+
+<p>Categories Below</p>
+
+<div><button id="makeCatListBtn">Make Categories List for EE</button></div>
+
+<div class="grid-container">
+  <div>
+  <select id="bigCatList" name="bigCatList" size="20" multiple></select>
+  </div>
+  <div>
+    <p id="output2"></p>
+  </div>
+</div>
 
 </body>
 </html>
 <script>
 
-	//let allTags = ['oneTag', 'twoTag', 'threeTag'];
-	// let bigT = document.getElementById("bigTagList");
-	// let optionTag = document.createElement("option");
-	// let allTagsLength = allTags.length;
+// ### preparing the page for the tags 
 
-
-
-	var element  = document.getElementById('bigTagList'); // assuming ul exists
-	var fragment = document.createDocumentFragment();
+	let element  = document.getElementById('bigTagList'); // assuming ul exists
+	let fragment = document.createDocumentFragment();
 	let allTags2 = ['Accelerators & Incubators','Achievement Network ANet','activism','Activism','Acumen Fund','Addiction','adolescent','adolescent brain','Adoption','Advocacy','Affordable Housing','Africa','African Americans','age','ageism','Aging','Agriculture','alternative facts','altruism','Altruism','American','Animal Welfare','Anti-corruption','artificial intelligence','Ashoka','Asia','asset','Australia','Automation','automation','autonomyworks','B Corporations','Bangladesh','Base of the Pyramid','Behavioral Science','benefit chicago','Benefit Corporations','big bets','Big Data','Big Society','Bill & Melinda Gates Foundation','Biomimicry','Boards','book','book review','BRAC','Brookings Institution','building movements','Bullying','Business','Business','business consultants','Capacity Building','Capacity-building','Carbon Credits','cause marketing','Cause Marketing','census','Center for Effective Philanthropy','certificate','change','charity','Charity','Charity Navigator','Charter Schools','chicago','Chief Executive Officer CEO','Child Labor','Child Marriage','Childcare','China','Cities','cities','city','civic','Civic Engagement','Civil Society','Clean Energy','Climate Change','Clinton Global Initiative','Cloud Technology','Co-operatives','Collaboration','Collective Impact','College','combination','Communication','communication strategy','Communities','community','Community','Community Foundations','Community organizing','complimentary','computer science','Conference','Conflict Resolution','connection','Conservation','Contests & Prizes','Corporate Social Responsibility','Corporate Venturing','Corporations','Council on Foundations','counting','course','creative','Criminal Justice','Criminal Justice Reform','Cross-sector Collaboration','Crowdfunding','Crowdsourcing','Data','data','data culture','Deforestation','Democracy','Depression','desiging','design','Design','design thinking','development','Development Impact Bonds','Digital Divide','digitization','Disability','Disaster Relief','Distribution Channels','Distribution Technology','Diversity','Divestment','Domestic Violence','Donor-advised Fund','Donors','DonorsChoose.org','Drones','Echoing Green','economics','ecosystem','Ecotourism','education','Education','Education Reform','effective','Effective Altruism','Elderly Care','Elections','Employment','Entrepreneurs','Entrepreneurship','Environment','Environmental Sustainability','Equity','Ethics','ethics','Europe','Executive Teams','Facebook','Failure','fair','Fair Trade','Faith-based Organizations','Fake News','Family Foundations','federal','Feedback','feedback','Finance','Financial Inclusion','Food Access','Food Banks','Food Safety','Food Security','Food Waste','for-profits','force','Ford Foundation','Foster Care','foundations','Foundations','framework','Franchising','free','Fund','funder','funding','Funding','fundraising','Fundraising','Games','Gay Rights','gender','Gender Equality','gender equality','Gender-lens Investing','GIIN','GIIRS & IRIS','Giving Circles','Giving Tuesday','Global Impact Investors Network','Global Issues','Going Local','Gordon and Betty Moore Foundation','Government Programs','Grameen Foundation','grantee','Grantmakers for Effective Organizations','Grantmaking','Grants','Grassroots Activism','GuideStar','Gun Violence','Habitat for Humanity','Hackathon','Haiti','Health','Health Care','high school','HIVAIDS','Housing','Human Capital','Human Resources','Human Rights','Human Trafficking','human-centered design','Hybrid Organizations','ideas','IDEO','Immigration','Impact','impact','Impact Investing','Inclusion','India','Indigenous Populations','Individual Giving','Inequality','Innovation','Innovation Labs','Innovation Theory','Intermediaries','International Development','Internet','Intrapreneurs','Investment','joining','joint','Kiva','L3C','Labor','Land Rights','Latin America','Latinos','Law','leader','Leadership','Lean Methodology','Learning from Failure','LEED','lgbt','LGBTQ','Literacy','macarthur foundation','Management','Marketing & Communication','Measurement & Evaluation','Media','media','Medical Technology','Medicine','Meetings','Mental Health','Mentorship','Mergers','Microfinance','Microinsurance','Middle East','Millennials','Millennium Development Goals','Mobile Giving','Mobile Money','Mobile Technology','model','moments','MOOCs','movement mapping','movements','Movements','Muhammad Yunus','Net Impact','Networking','Networks','networks','neuroscience','no place like home','Nonprofit Management','Nonprofits','nonprofits','NTEN','Omidyar Network','One Acre Fund','Open Source','Opioid Crisis','organization','Organizational Knowledge','Organizational Learning','Organizational Networks','Organizational Sustainability','Paris Climate Agreement','Partnerships','Pay for Success','Performance Metrics','Personal Development','Pew Charitable Trusts','Philanthropy','Philanthropy Information Services','pipeline','Place-based Philanthropy','Planned Parenthood','polarization','Policy Reform','Poverty','Poverty Psychology','press','Privacy','privatization','Prizes','Pro Bono','Problem Driven Iterative Adaptation PDIA','Program-related Investing','prototype','Psychology','Public Health','public interest','public policy','Public Policy','Public Sector','Purpose','purpose learning','racial justice','Racism','Recession','Recidivism','Refugees','Regulation','relationships','Religion','Renewable Energy','Research','Research & Development','Resilience','Rockefeller Foundation','Root Capital','root causes','Scaling','scaling','Science and Technology','SDG','seeding','Sex Slavery','Sexism','Shared Value','Sharing Economy','Silicon Valley','skills','Skoll Foundation','Small & Medium Enterprises','social activism','Social Enterprise','Social Entrepreneurship','Social Impact','Social Impact Bonds','Social Innovation','Social Innovation Fund','Social Justice','Social Media','social movements','Social Networking','Social Responsibility','Social Sector','Social-emotional Wellbeing','Socially Responsible Business','solution','South America','Spending Down','staff','STEM','Storytelling','Strategic Philanthropy','Strategic Planning','strategy','Strive Together','strongminds','Supply Chain','Supply Chains','survival','sustain','Sustainability','Sustainable Development Goals','synergy','system','Systems Change','systems thinking','tactics','Talent Development','Tax Reform','Teach for America','Technology','thinking','tips','tools','transfer','Transparency','Trust','trust','Unemployment','UNICEF','Unilever','Union','United Nations','United States','United Way','Unrestricted Funding','USAID','using','Values','Venture Capital','Venture Philanthropy','Volunteering','Voting','Water and Sanitation','WhatsApp','William and Flora Hewlett Foundation','Women','women & girls','Women\'s Economic Empowerment','Workers',' Rights','workshop','World Economic Forum','World Health Organization','Youth'];
-	let allTags = ['oneTag', 'twoTag', 'threeTag'];
-	// var browsers = ['Firefox', 'Chrome', 'Opera', 'Safari', 'Internet Explorer', 'more', '22222', '33333'];
-	allTags2.forEach(function(allTags2) {
-	    var optionTag = document.createElement('option');
+	
+  allTags2.forEach(function(allTags2) {
+	    let optionTag = document.createElement('option');
 	    optionTag.textContent = allTags2;
 	    fragment.appendChild(optionTag);
 	});
-
 	element.appendChild(fragment);
 
-// processing the selections
+// ### processing the tag selections
 
 let makeTagListBtn = document.getElementById("makeTagListBtn");
 let itemList = document.getElementById("bigTagList");
 let outputBox = document.getElementById("output");
 
-
 makeTagListBtn.addEventListener("click", function() {
   let collection = itemList.selectedOptions;
   let output = "";
- 
   for (let i=0; i<collection.length; i++) {
     if (output === "") {
       output = "";
     }
-    output += collection[i].label;
-    
+    output += collection[i].label;  
     if (i === (collection.length - 2) && (collection.length < 3)) {
       output +=  ", ";
     } else if (i < (collection.length - 2)) {
@@ -100,4 +105,66 @@ makeTagListBtn.addEventListener("click", function() {
   outputBox.innerHTML = output;
 }, false);
 
+
+/* 
+#########
+#########
+#########
+
+Below is categories 
+
+#########
+#########
+#########
+
+*/
+
+// ### preparing the page for the categories 
+
+let makeCatListBtn = document.getElementById("makeCatListBtn");
+let itemList2 = document.getElementById("bigCatList");
+let outputBox2 = document.getElementById("output2");
+
+  let element2  = document.getElementById('bigCatList'); // assuming ul exists
+  let fragment2 = document.createDocumentFragment();
+  let allCats = ['SOCIAL ISSUES (top-level)','Arts & Culture','Cities','Civic Engagement','Economic Development','Education','Energy','Environment','Food','Health','Human Rights','Security','Social Services','Water & Sanitation','SECTORS (top-level)','Business','Foundations','Government','Nonprofits & NGOs','Social Enterprise','SOLUTIONS (top-level)','Advocacy','Collaboration','Design Thinking','Governance','Impact Investing','Leadership','Measurement & Evaluation','Organizational Development','Philanthropy & Funding','Scaling','Technology'];
+
+  allCats.forEach(function(allCats) {
+      let optionTag = document.createElement('option');
+      optionTag.textContent = allCats;
+      fragment2.appendChild(optionTag);
+  });
+  element2.appendChild(fragment2);
+
+// ### processing the cat selections
+
+makeCatListBtn.addEventListener("click", function() {
+  let collection2 = itemList2.selectedOptions;
+  let output2 = "";
+  for (let i=0; i<collection2.length; i++) {
+    if (output2 === "") {
+      output2 = "";
+    }
+    output2 += collection2[i].label;  
+    if (i === (collection2.length - 2) && (collection2.length < 3)) {
+      output2 +=  ", ";
+    } else if (i < (collection2.length - 2)) {
+      output2 += ", ";
+    } else if (i === (collection2.length - 2)) {
+      output2 += ", ";
+    }
+  }
+ 
+  if (output2 === "") {
+    output2 = "You didn't order anything!";
+  }
+ 
+  outputBox2.innerHTML = output2;
+}, false);
+
 </script>
+
+<!-- use [\r\n] to sort regex
+	https://community.boomi.com/s/article/howtouseregextomatchcarriagereturnsandlinefeedcharactersinsearchandreplace
+  -->
+  
