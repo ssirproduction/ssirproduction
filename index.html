@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Web Page Example</title>
+  <title>SSIR Tag/Cat List Maker</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <meta name="description" content="SSIR Tag/Cat List Maker">
+  <meta name="author" content="SSIR Producer">
   <!-- <link rel="stylesheet" href="#"> -->
   <style>
+
+  body {
+    font-size: 14px;
+  }
 
   .grid-container {
   display: grid;
   grid-template-columns: 25% 75%;
   grid-gap: 1px;
   background-color: #2196F3;
-  padding: 1px;
+  padding: 0;
+  margin: 0 10px 0 0;
 }
 
 .grid-container>div {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
+  padding: 10px;
 }
 
 button {
@@ -35,29 +40,37 @@ button:hover {
 	color: white;
 }
 
+#bigTagList {
+  width: 100%;
+}
+
+#bigCatList {
+  width: 100%;
+}
+
   </style>
 
 </head>
 
 <body>
-  <div>Tags Below <button id="makeTagListBtn">Make Tags List for Doc</button></div>
+  <div><strong>SSIR tags</strong>: Hold down the <em>⌘Command</em> key or <em>⊞Windows</em> key to select multiple options. Click the button when you're done choosing ==> <button id="makeTagListBtn">Make Tags List for Doc</button></div>
 
 <div class="grid-container">
 	<div>
-	<select id="bigTagList" name="bigTagList" size="30" multiple></select>
+	<select id="bigTagList" name="bigTagList" size="32" multiple></select>
 	</div>
 	<div>
 		<p id="output"></p>
 	</div>
 </div>
 
-<div>Categories Below <button id="makeCatListBtn">Make Categories List for Doc</button></div>
+<div><strong>SSIR categories</strong>: Hold down the <em>⌘Command</em> key or <em>⊞Windows</em> key to select multiple options. Click the button when you're done choosing ==>  <button id="makeCatListBtn">Make Categories List for Doc</button></div>
 
 
 
 <div class="grid-container">
   <div>
-  <select id="bigCatList" name="bigCatList" size="20" multiple></select>
+  <select id="bigCatList" name="bigCatList" size="32" multiple></select>
   </div>
   <div>
     <p id="output2"></p>
